@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-steel-50: #f2f6fa;
+  --color-steel-100: #e3ecf4;
+  --color-steel-200: #c6d8e8;
+  --color-steel-300: #97b7d3;
+  --color-steel-400: #6290b8;
+  --color-steel-500: #3f6f9d;
+  --color-steel-600: #2f5782;
+  --color-steel-700: #27466a;
+  --color-steel-800: #1b3552;
+  --color-steel-900: #0f2338;
+  --color-steel-950: #081726;
+
+  --color-safety-50: #fff5ed;
+  --color-safety-100: #ffe8d4;
+  --color-safety-200: #ffcda8;
+  --color-safety-300: #ffa970;
+  --color-safety-400: #ff7a36;
+  --color-safety-500: #ff5a0f;
+  --color-safety-600: #f03d05;
+  --color-safety-700: #c72c07;
+  --color-safety-800: #9e250e;
+  --color-safety-900: #7f210f;
+
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 38s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: var(--color-steel-900);
+    -webkit-font-smoothing: antialiased;
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: var(--color-safety-500);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .container-tk {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    max-width: 80rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-tk {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-tk {
+      padding-inline: 2rem;
+    }
+  }
+}
+
+/* Scroll reveal — elements start hidden and are released by IntersectionObserver.
+   The .reveal-ready guard keeps content visible when JS never runs. */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-marquee,
+  [class*="animate-\\["] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website giới thiệu doanh nghiệp Thiên Khôi
 
-## Getting Started
+Website giới thiệu công ty Thiên Khôi — kệ kho hàng, hệ thống kho tự động AS/RS,
+pallet và thiết bị công nghiệp. Xây dựng bằng Next.js App Router, TypeScript và
+Tailwind CSS v4, tối ưu cho SEO tiếng Việt.
 
-First, run the development server:
+## Chạy dự án
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # build production
+npm run start   # chạy bản production
+npm run lint    # kiểm tra lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Biến môi trường
 
-## Learn More
+Sao chép `.env.example` thành `.env.local` và điền giá trị:
 
-To learn more about Next.js, take a look at the following resources:
+| Biến | Bắt buộc | Mô tả |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Có | Tên miền thật. Dùng cho canonical, sitemap, robots, Open Graph. Mặc định `https://thienkhoi.vn`. |
+| `CONTACT_WEBHOOK_URL` | Không | Endpoint nhận dữ liệu biểu mẫu liên hệ. Bỏ trống thì form báo người dùng gọi hotline. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cấu trúc
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/
+    page.tsx              Trang chủ
+    ve-chung-toi/         Giới thiệu, tầm nhìn, sứ mệnh, quy trình
+    san-pham/             Danh sách sản phẩm + lọc theo danh mục
+    san-pham/[slug]/      Chi tiết sản phẩm (23 trang tĩnh)
+    giai-phap/            Giải pháp theo loại kho
+    du-an/                Công trình tiêu biểu
+    lien-he/              Liên hệ + biểu mẫu (Server Action)
+    sitemap.ts robots.ts  SEO
+  components/             Header, Footer, thẻ sản phẩm, form, hiệu ứng
+  data/                   Toàn bộ nội dung (company, products, solutions, projects)
+  lib/seo.ts              Helper metadata + JSON-LD
+public/images/            Ảnh sản phẩm, dự án, đối tác, Open Graph
+```
 
-## Deploy on Vercel
+## Sửa nội dung
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Toàn bộ nội dung nằm trong `src/data/`, không cần CMS:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `company.ts` — thông tin công ty, tầm nhìn, sứ mệnh, quy trình
+- `products.ts` — danh mục và 23 sản phẩm (mô tả, ưu điểm, thông số)
+- `solutions.ts` — 6 nhóm giải pháp theo loại kho
+- `projects.ts` — công trình tiêu biểu và logo đối tác
+
+Ảnh sản phẩm đặt tại `public/images/products/<slug>.jpg`. Ảnh phụ trong thư viện
+đặt tên `<slug>-2.jpg`, `<slug>-3.jpg` và khai báo số lượng trong `galleryExtras`
+ở cuối `products.ts`.
+
+Ảnh chia sẻ mạng xã hội đặt tại `public/images/og/<slug>.jpg`, kích thước 1200×630.
+
+## SEO đã triển khai
+
+- Metadata API: title template, description, canonical, Open Graph, Twitter Card
+- JSON-LD: `Organization`, `WebSite`, `LocalBusiness`, `BreadcrumbList`, `Product`, `ItemList`
+- `sitemap.xml` và `robots.txt` sinh tự động theo dữ liệu sản phẩm
+- 23 trang chi tiết sản phẩm prerender tĩnh (SSG)
+- `lang="vi"`, heading phân cấp, breadcrumb, alt ảnh mô tả bằng tiếng Việt
+- Ảnh tối ưu qua `next/image`, font Be Vietnam Pro tải qua `next/font`
+- Hiệu ứng tôn trọng `prefers-reduced-motion`
+
+## Cần bổ sung trước khi chạy thật
+
+- Đặt `NEXT_PUBLIC_SITE_URL` thành tên miền thật
+- Xác nhận tên pháp lý đầy đủ của công ty trong `src/data/company.ts`
+- Bổ sung ảnh thật cho `ke-khuon` và `asrs-mini-load`
+- Xác nhận quyền sử dụng logo đối tác trong `src/data/projects.ts`
+- Bổ sung thông tin thật cho các công trình trong `src/data/projects.ts`
+- Kết nối `CONTACT_WEBHOOK_URL` để nhận yêu cầu từ biểu mẫu
