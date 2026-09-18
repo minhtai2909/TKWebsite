@@ -30,13 +30,13 @@ export function Hero() {
 
       <div className="container-tk relative py-20 sm:py-28 lg:py-36">
         <div className="max-w-2xl">
-          <p className="animate-[fadeUp_0.7s_ease-out_both] text-[13px] font-bold uppercase tracking-[0.2em] text-safety-400">
+          <p className="animate-[fadeUp_0.7s_ease-out_both] text-[13px] font-bold uppercase tracking-[0.2em] text-aqua-300">
             {company.tagline}
           </p>
 
           <h1 className="mt-5 animate-[fadeUp_0.7s_ease-out_0.1s_both] text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
             Giải pháp{" "}
-            <span className="relative whitespace-nowrap text-safety-400">
+            <span className="relative whitespace-nowrap text-aqua-300">
               kệ kho hàng
             </span>{" "}
             & kho tự động
@@ -51,7 +51,7 @@ export function Hero() {
           <div className="mt-9 flex animate-[fadeUp_0.7s_ease-out_0.3s_both] flex-col gap-3 sm:flex-row">
             <Link
               href="/san-pham"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-safety-500 px-8 py-4 text-[15px] font-semibold text-white shadow-lg shadow-safety-900/30 transition-all hover:bg-safety-600 hover:shadow-xl active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-[15px] font-semibold text-white shadow-lg shadow-accent-900/30 transition-all hover:bg-accent-600 hover:shadow-xl active:scale-[0.98]"
             >
               Khám phá sản phẩm
               <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -74,7 +74,7 @@ export function Hero() {
             {highlights.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <svg
-                  className="h-4 w-4 shrink-0 text-safety-400"
+                  className="h-4 w-4 shrink-0 text-aqua-400"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"

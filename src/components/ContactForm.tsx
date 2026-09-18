@@ -82,7 +82,7 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
           id="product"
           name="product"
           defaultValue={defaultProduct ?? ""}
-          className="mt-2 w-full rounded-lg border border-steel-300 bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:border-safety-500 focus:outline-none focus:ring-2 focus:ring-safety-500/20"
+          className="mt-2 w-full rounded-lg border border-steel-300 bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20"
         >
           <option value="">— Chọn sản phẩm —</option>
           {products.map((p) => (
@@ -98,7 +98,7 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
           htmlFor="message"
           className="block text-sm font-semibold text-steel-800"
         >
-          Nhu cầu của bạn <span className="text-safety-600">*</span>
+          Nhu cầu của bạn <span className="text-accent-600">*</span>
         </label>
         <textarea
           id="message"
@@ -107,10 +107,10 @@ export function ContactForm({ defaultProduct }: { defaultProduct?: string }) {
           required
           placeholder="Diện tích kho, chiều cao trần, loại hàng hóa, tải trọng pallet..."
           aria-invalid={Boolean(state.fieldErrors?.message)}
-          className={`mt-2 w-full rounded-lg border bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:outline-none focus:ring-2 focus:ring-safety-500/20 ${
+          className={`mt-2 w-full rounded-lg border bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500/20 ${
             state.fieldErrors?.message
               ? "border-red-400"
-              : "border-steel-300 focus:border-safety-500"
+              : "border-steel-300 focus:border-accent-500"
           }`}
         />
         {state.fieldErrors?.message && (
@@ -143,7 +143,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-safety-500 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-safety-600 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+      className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-accent-600 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
     >
       {pending && (
         <svg
@@ -190,7 +190,7 @@ function Field({
   return (
     <div>
       <label htmlFor={name} className="block text-sm font-semibold text-steel-800">
-        {label} {required && <span className="text-safety-600">*</span>}
+        {label} {required && <span className="text-accent-600">*</span>}
       </label>
       <input
         id={name}
@@ -199,8 +199,8 @@ function Field({
         required={required}
         autoComplete={autoComplete}
         aria-invalid={Boolean(error)}
-        className={`mt-2 w-full rounded-lg border bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:outline-none focus:ring-2 focus:ring-safety-500/20 ${
-          error ? "border-red-400" : "border-steel-300 focus:border-safety-500"
+        className={`mt-2 w-full rounded-lg border bg-white px-4 py-3 text-[15px] text-steel-900 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-500/20 ${
+          error ? "border-red-400" : "border-steel-300 focus:border-accent-500"
         }`}
       />
       {error && <p className="mt-1.5 text-sm text-red-600">{error}</p>}

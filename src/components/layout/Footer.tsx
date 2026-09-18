@@ -27,7 +27,7 @@ export function Footer() {
           <p className="mt-5 text-sm leading-relaxed text-steel-400">
             {company.shortDescription}
           </p>
-          <p className="mt-4 text-sm font-semibold italic text-safety-400">
+          <p className="mt-4 text-sm font-semibold italic text-aqua-300">
             “{company.slogan}”
           </p>
         </div>
@@ -41,7 +41,7 @@ export function Footer() {
               <li key={p.slug}>
                 <Link
                   href={`/san-pham/${p.slug}`}
-                  className="text-steel-400 transition-colors hover:text-safety-400"
+                  className="text-steel-400 transition-colors hover:text-aqua-300"
                 >
                   {p.name}
                 </Link>
@@ -50,7 +50,7 @@ export function Footer() {
             <li>
               <Link
                 href="/san-pham"
-                className="font-semibold text-steel-200 transition-colors hover:text-safety-400"
+                className="font-semibold text-steel-200 transition-colors hover:text-aqua-300"
               >
                 Xem tất cả sản phẩm →
               </Link>
@@ -67,7 +67,7 @@ export function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/giai-phap#${s.slug}`}
-                  className="text-steel-400 transition-colors hover:text-safety-400"
+                  className="text-steel-400 transition-colors hover:text-aqua-300"
                 >
                   {s.name}
                 </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               <li key={c.slug}>
                 <Link
                   href={`/san-pham?danh-muc=${c.slug}`}
-                  className="text-steel-400 transition-colors hover:text-safety-400"
+                  className="text-steel-400 transition-colors hover:text-aqua-300"
                 >
                   {c.name}
                 </Link>
@@ -103,7 +103,7 @@ export function Footer() {
               <span className="block text-steel-500">Hotline</span>
               <a
                 href={company.hotlineHref}
-                className="text-lg font-bold text-safety-400 transition-colors hover:text-safety-300"
+                className="text-lg font-bold text-aqua-300 transition-colors hover:text-aqua-200"
               >
                 {company.hotline}
               </a>
@@ -112,7 +112,7 @@ export function Footer() {
               <span className="block text-steel-500">Email</span>
               <a
                 href={`mailto:${company.email}`}
-                className="text-steel-200 transition-colors hover:text-safety-400"
+                className="text-steel-200 transition-colors hover:text-aqua-300"
               >
                 {company.email}
               </a>

@@ -41,7 +41,7 @@ export function ProductGallery({
               aria-current={i === active}
               className={`relative aspect-[4/3] w-24 overflow-hidden rounded-lg border-2 transition-all ${
                 i === active
-                  ? "border-safety-500"
+                  ? "border-accent-500"
                   : "border-transparent opacity-60 hover:opacity-100"
               }`}
             >

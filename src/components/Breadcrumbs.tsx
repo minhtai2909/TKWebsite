@@ -29,7 +29,7 @@ export function Breadcrumbs({
                     className={`transition-colors ${
                       isLight
                         ? "text-steel-300 hover:text-white"
-                        : "text-steel-500 hover:text-safety-600"
+                        : "text-steel-500 hover:text-accent-600"
                     }`}
                   >
                     {item.name}

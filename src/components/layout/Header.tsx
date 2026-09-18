@@ -54,7 +54,7 @@ export function Header() {
             </a>
             <a
               href={company.hotlineHref}
-              className="font-semibold text-safety-400 transition-colors hover:text-safety-300"
+              className="font-semibold text-aqua-300 transition-colors hover:text-aqua-200"
             >
               Hotline: {company.hotline}
             </a>
@@ -87,8 +87,8 @@ export function Header() {
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={`relative flex items-center gap-1 rounded-md px-3.5 py-2 text-[15px] font-medium transition-colors ${
                     isActive(item.href)
-                      ? "text-safety-600"
-                      : "text-steel-700 hover:text-safety-600"
+                      ? "text-accent-600"
+                      : "text-steel-700 hover:text-accent-600"
                   }`}
                 >
                   {item.label}
@@ -109,7 +109,7 @@ export function Header() {
                     </svg>
                   )}
                   <span
-                    className={`absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left rounded-full bg-safety-500 transition-transform duration-300 ${
+                    className={`absolute inset-x-3.5 -bottom-0.5 h-0.5 origin-left rounded-full bg-accent-500 transition-transform duration-300 ${
                       isActive(item.href) ? "scale-x-100" : "scale-x-0"
                     }`}
                   />
@@ -124,7 +124,7 @@ export function Header() {
                         onClick={() => setOpenMenu(null)}
                         className="group rounded-lg p-3 transition-colors hover:bg-steel-50"
                       >
-                        <p className="font-semibold text-steel-900 group-hover:text-safety-600">
+                        <p className="font-semibold text-steel-900 group-hover:text-accent-600">
                           {c.name}
                         </p>
                         <p className="mt-1 text-[13px] leading-relaxed text-steel-500">
@@ -144,7 +144,7 @@ export function Header() {
                         onClick={() => setOpenMenu(null)}
                         className="group rounded-lg p-3 transition-colors hover:bg-steel-50"
                       >
-                        <p className="font-semibold text-steel-900 group-hover:text-safety-600">
+                        <p className="font-semibold text-steel-900 group-hover:text-accent-600">
                           {s.name}
                         </p>
                         <p className="mt-1 text-[13px] leading-relaxed text-steel-500">
@@ -161,7 +161,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <a
               href={company.hotlineHref}
-              className="hidden items-center gap-2 rounded-full bg-safety-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-safety-600 hover:shadow-md active:scale-[0.98] sm:flex"
+              className="hidden items-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-accent-600 hover:shadow-md active:scale-[0.98] sm:flex"
             >
               <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.5 11.5 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-7.18 0-13-5.82-13-13V3.5Z" />
@@ -212,7 +212,7 @@ export function Header() {
               href={item.href}
               onClick={() => setMobileOpen(false)}
               className={`border-b border-steel-100 py-3.5 text-[15px] font-medium last:border-0 ${
-                isActive(item.href) ? "text-safety-600" : "text-steel-800"
+                isActive(item.href) ? "text-accent-600" : "text-steel-800"
               }`}
             >
               {item.label}
@@ -220,7 +220,7 @@ export function Header() {
           ))}
           <a
             href={company.hotlineHref}
-            className="mt-4 mb-2 rounded-full bg-safety-500 px-5 py-3 text-center text-sm font-semibold text-white"
+            className="mt-4 mb-2 rounded-full bg-accent-500 px-5 py-3 text-center text-sm font-semibold text-white"
           >
             Gọi ngay {company.hotline}
           </a>

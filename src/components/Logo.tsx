@@ -22,7 +22,7 @@ export function Logo({
       <span className="flex flex-col justify-center leading-none">
         <span
           className={`text-[19px] font-extrabold tracking-[0.05em] ${
-            isLight ? "text-white" : "text-[#4a4a4a]"
+            isLight ? "text-white" : "text-steel-900"
           }`}
         >
           THIÊN KHÔI

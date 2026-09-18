@@ -1,28 +1,46 @@
 @import "tailwindcss";
 
 @theme {
-  --color-steel-50: #f2f6fa;
-  --color-steel-100: #e3ecf4;
-  --color-steel-200: #c6d8e8;
-  --color-steel-300: #97b7d3;
-  --color-steel-400: #6290b8;
-  --color-steel-500: #3f6f9d;
-  --color-steel-600: #2f5782;
-  --color-steel-700: #27466a;
-  --color-steel-800: #1b3552;
-  --color-steel-900: #0f2338;
-  --color-steel-950: #081726;
+  /* Bảng màu lấy từ hồ sơ năng lực (PDF): navy #091d69, xanh thương hiệu
+     #046fe1, xanh cyan #00acef — nền trắng là chủ đạo. */
 
-  --color-safety-50: #fff5ed;
-  --color-safety-100: #ffe8d4;
-  --color-safety-200: #ffcda8;
-  --color-safety-300: #ffa970;
-  --color-safety-400: #ff7a36;
-  --color-safety-500: #ff5a0f;
-  --color-safety-600: #f03d05;
-  --color-safety-700: #c72c07;
-  --color-safety-800: #9e250e;
-  --color-safety-900: #7f210f;
+  /* steel — navy & xanh xám trung tính cho nền, chữ, viền */
+  --color-steel-50: #f3f7fc;
+  --color-steel-100: #e4edf7;
+  --color-steel-200: #cbdbee;
+  --color-steel-300: #a3bcda;
+  --color-steel-400: #6f8fb8;
+  --color-steel-500: #4a6b93;
+  --color-steel-600: #35547d;
+  --color-steel-700: #284470;
+  --color-steel-800: #1a3059;
+  --color-steel-900: #0f2352;
+  --color-steel-950: #071433;
+
+  /* accent — xanh thương hiệu (nút, liên kết, điểm nhấn) */
+  --color-accent-50: #eef5ff;
+  --color-accent-100: #d9e9ff;
+  --color-accent-200: #bbd8ff;
+  --color-accent-300: #8bbcff;
+  --color-accent-400: #4f98f8;
+  --color-accent-500: #046fe1;
+  --color-accent-600: #0058c0;
+  --color-accent-700: #05469b;
+  --color-accent-800: #0a3a7d;
+  --color-accent-900: #0d3165;
+  --color-accent-950: #082044;
+
+  /* aqua — xanh cyan, dùng trên nền tối và các chi tiết nhỏ */
+  --color-aqua-50: #ecfaff;
+  --color-aqua-100: #d2f2ff;
+  --color-aqua-200: #a6e6ff;
+  --color-aqua-300: #6bd6fb;
+  --color-aqua-400: #26c1f5;
+  --color-aqua-500: #00acef;
+  --color-aqua-600: #008ac6;
+  --color-aqua-700: #056e9e;
+  --color-aqua-800: #0b5a81;
+  --color-aqua-900: #0f4b6b;
 
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
 
@@ -69,7 +87,7 @@
   }
 
   ::selection {
-    background-color: var(--color-safety-500);
+    background-color: var(--color-accent-500);
     color: #ffffff;
   }
 }

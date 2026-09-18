@@ -89,7 +89,7 @@ export default async function ProductDetailPage({
               {category && (
                 <Link
                   href={`/san-pham?danh-muc=${category.slug}`}
-                  className="inline-flex items-center gap-2 rounded-full bg-safety-50 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wider text-safety-700 transition-colors hover:bg-safety-100"
+                  className="inline-flex items-center gap-2 rounded-full bg-accent-50 px-4 py-1.5 text-[13px] font-bold uppercase tracking-wider text-accent-700 transition-colors hover:bg-accent-100"
                 >
                   {category.name}
                 </Link>
@@ -114,7 +114,7 @@ export default async function ProductDetailPage({
                 {product.features.map((feature) => (
                   <li key={feature} className="flex gap-3">
                     <svg
-                      className="mt-0.5 h-5 w-5 shrink-0 text-safety-500"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-accent-500"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
@@ -168,7 +168,7 @@ export default async function ProductDetailPage({
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
                     href={company.hotlineHref}
-                    className="inline-flex items-center justify-center rounded-full bg-safety-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-safety-600"
+                    className="inline-flex items-center justify-center rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-600"
                   >
                     Gọi {company.hotline}
                   </a>

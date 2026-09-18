@@ -25,7 +25,7 @@ export function SectionHeading({
           <p
             className={`flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.18em] ${
               align === "center" ? "justify-center" : ""
-            } ${isLight ? "text-safety-400" : "text-safety-600"}`}
+            } ${isLight ? "text-aqua-300" : "text-accent-600"}`}
           >
             <span className="h-px w-8 bg-current" aria-hidden="true" />
             {eyebrow}

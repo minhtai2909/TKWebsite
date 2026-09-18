@@ -123,8 +123,8 @@ function FilterChip({
       aria-current={active ? "true" : undefined}
       className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
         active
-          ? "border-safety-500 bg-safety-500 text-white"
-          : "border-steel-300 text-steel-700 hover:border-safety-400 hover:text-safety-600"
+          ? "border-accent-500 bg-accent-500 text-white"
+          : "border-steel-300 text-steel-700 hover:border-accent-400 hover:text-accent-600"
       }`}
     >
       {children}

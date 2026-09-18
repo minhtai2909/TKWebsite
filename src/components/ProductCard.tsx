@@ -12,7 +12,7 @@ export function ProductCard({
   return (
     <Link
       href={`/san-pham/${product.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-xl border border-steel-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-safety-300 hover:shadow-xl hover:shadow-steel-900/10"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-steel-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-accent-300 hover:shadow-xl hover:shadow-steel-900/10"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-steel-100">
         <Image
@@ -29,13 +29,13 @@ export function ProductCard({
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-lg font-bold text-steel-900 transition-colors group-hover:text-safety-600">
+        <h3 className="text-lg font-bold text-steel-900 transition-colors group-hover:text-accent-600">
           {product.name}
         </h3>
         <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-steel-600">
           {product.summary}
         </p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-safety-600">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-600">
           Xem chi tiết
           <svg
             className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"

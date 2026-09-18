@@ -60,7 +60,7 @@ export default function SolutionsPage() {
 
                 <div className={flip ? "lg:order-1" : undefined}>
                   <Reveal>
-                    <p className="flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.18em] text-safety-600">
+                    <p className="flex items-center gap-2.5 text-[13px] font-bold uppercase tracking-[0.18em] text-accent-600">
                       <span className="h-px w-8 bg-current" aria-hidden="true" />
                       Giải pháp {String(index + 1).padStart(2, "0")}
                     </p>
@@ -77,7 +77,7 @@ export default function SolutionsPage() {
                       {solution.points.map((point) => (
                         <li key={point} className="flex gap-3">
                           <svg
-                            className="mt-0.5 h-5 w-5 shrink-0 text-safety-500"
+                            className="mt-0.5 h-5 w-5 shrink-0 text-accent-500"
                             viewBox="0 0 20 20"
                             fill="currentColor"
                             aria-hidden="true"
@@ -106,7 +106,7 @@ export default function SolutionsPage() {
                           <Link
                             key={product.slug}
                             href={`/san-pham/${product.slug}`}
-                            className="rounded-full border border-steel-300 px-4 py-2 text-sm font-medium text-steel-700 transition-all hover:border-safety-400 hover:bg-safety-50 hover:text-safety-700"
+                            className="rounded-full border border-steel-300 px-4 py-2 text-sm font-medium text-steel-700 transition-all hover:border-accent-400 hover:bg-accent-50 hover:text-accent-700"
                           >
                             {product.name}
                           </Link>

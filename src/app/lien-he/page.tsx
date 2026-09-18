@@ -115,7 +115,7 @@ export default async function ContactPage({
                 Gửi yêu cầu tư vấn
               </h2>
               <p className="mt-2 text-[15px] text-steel-600">
-                Các trường có dấu <span className="text-safety-600">*</span> là bắt buộc.
+                Các trường có dấu <span className="text-accent-600">*</span> là bắt buộc.
               </p>
               <div className="mt-7">
                 <ContactForm defaultProduct={params["san-pham"]} />
@@ -142,8 +142,8 @@ function ContactItem({
   const body = href ? (
     <a
       href={href}
-      className={`transition-colors hover:text-safety-600 ${
-        highlight ? "text-2xl font-extrabold text-safety-600" : "font-semibold text-steel-900"
+      className={`transition-colors hover:text-accent-600 ${
+        highlight ? "text-2xl font-extrabold text-accent-600" : "font-semibold text-steel-900"
       }`}
     >
       {children}

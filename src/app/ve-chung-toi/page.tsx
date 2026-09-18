@@ -40,7 +40,7 @@ export default function AboutPage() {
               description={company.longDescription}
             />
             <Reveal delay={220}>
-              <blockquote className="mt-9 border-l-4 border-safety-500 bg-steel-50 py-5 pl-6 pr-5">
+              <blockquote className="mt-9 border-l-4 border-accent-500 bg-steel-50 py-5 pl-6 pr-5">
                 <p className="text-xl font-bold italic text-steel-900">
                   “{company.slogan}”
                 </p>
@@ -76,8 +76,8 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {vision.map((v, i) => (
               <Reveal key={v.title} delay={i * 100}>
-                <div className="h-full rounded-xl border border-white/10 bg-white/5 p-7 transition-colors hover:border-safety-400/50">
-                  <h3 className="text-xl font-bold text-safety-400">{v.title}</h3>
+                <div className="h-full rounded-xl border border-white/10 bg-white/5 p-7 transition-colors hover:border-aqua-400/50">
+                  <h3 className="text-xl font-bold text-aqua-300">{v.title}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-steel-300">
                     {v.body}
                   </p>
@@ -98,9 +98,9 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {mission.map((m, i) => (
               <Reveal key={m.title} delay={i * 100}>
-                <div className="h-full rounded-xl border border-steel-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-safety-300 hover:shadow-lg">
+                <div className="h-full rounded-xl border border-steel-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent-300 hover:shadow-lg">
                   <span
-                    className="block h-1 w-10 rounded-full bg-safety-500"
+                    className="block h-1 w-10 rounded-full bg-accent-500"
                     aria-hidden="true"
                   />
                   <h3 className="mt-5 text-xl font-bold text-steel-900">{m.title}</h3>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                         className="flex gap-2.5 text-sm leading-relaxed text-steel-600"
                       >
                         <span
-                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-safety-500"
+                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500"
                           aria-hidden="true"
                         />
                         {item}

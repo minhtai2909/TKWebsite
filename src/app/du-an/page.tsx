@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="p-7">
                   <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="rounded-full bg-safety-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-safety-700">
+                    <span className="rounded-full bg-accent-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-accent-700">
                       {project.productType}
                     </span>
                     <span className="text-[13px] text-steel-500">

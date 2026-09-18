@@ -64,9 +64,9 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-7 -right-4 hidden rounded-xl bg-safety-500 px-7 py-5 text-white shadow-xl sm:block lg:-right-7">
+            <div className="absolute -bottom-7 -right-4 hidden rounded-xl bg-accent-500 px-7 py-5 text-white shadow-xl sm:block lg:-right-7">
               <p className="text-3xl font-extrabold leading-none">AS/RS</p>
-              <p className="mt-1.5 text-sm font-medium text-safety-50">
+              <p className="mt-1.5 text-sm font-medium text-accent-50">
                 Tích hợp WMS / WCS / PLC
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function HomePage() {
                 {vision.map((v) => (
                   <div
                     key={v.title}
-                    className="rounded-lg border-l-2 border-safety-500 bg-steel-50 py-3 pl-4 pr-3"
+                    className="rounded-lg border-l-2 border-accent-500 bg-steel-50 py-3 pl-4 pr-3"
                   >
                     <p className="font-bold text-steel-900">{v.title}</p>
                     <p className="mt-1 text-sm leading-relaxed text-steel-600">
@@ -96,7 +96,7 @@ export default function HomePage() {
             <Reveal delay={300}>
               <Link
                 href="/ve-chung-toi"
-                className="group mt-8 inline-flex items-center gap-2 font-semibold text-safety-600"
+                className="group mt-8 inline-flex items-center gap-2 font-semibold text-accent-600"
               >
                 Tìm hiểu về Thiên Khôi
                 <svg
@@ -131,18 +131,18 @@ export default function HomePage() {
               <Reveal key={c.slug} delay={i * 80}>
                 <Link
                   href={`/san-pham?danh-muc=${c.slug}`}
-                  className="group flex h-full flex-col rounded-xl border border-steel-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-safety-300 hover:shadow-xl hover:shadow-steel-900/10"
+                  className="group flex h-full flex-col rounded-xl border border-steel-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent-300 hover:shadow-xl hover:shadow-steel-900/10"
                 >
-                  <span className="text-[13px] font-bold uppercase tracking-wider text-safety-600">
+                  <span className="text-[13px] font-bold uppercase tracking-wider text-accent-600">
                     {c.short}
                   </span>
-                  <h3 className="mt-3 text-xl font-bold text-steel-900 transition-colors group-hover:text-safety-600">
+                  <h3 className="mt-3 text-xl font-bold text-steel-900 transition-colors group-hover:text-accent-600">
                     {c.name}
                   </h3>
                   <p className="mt-3 flex-1 text-[15px] leading-relaxed text-steel-600">
                     {c.description}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-steel-500 transition-colors group-hover:text-safety-600">
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-steel-500 transition-colors group-hover:text-accent-600">
                     Xem sản phẩm
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -172,7 +172,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/lien-he"
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-safety-500 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-safety-600"
+                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-accent-500 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent-600"
                 >
                   Yêu cầu thiết kế riêng
                 </Link>
@@ -192,7 +192,7 @@ export default function HomePage() {
             <Reveal delay={160}>
               <Link
                 href="/san-pham"
-                className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-steel-300 px-6 py-3 text-sm font-semibold text-steel-800 transition-all hover:border-safety-400 hover:text-safety-600"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-steel-300 px-6 py-3 text-sm font-semibold text-steel-800 transition-all hover:border-accent-400 hover:text-accent-600"
               >
                 Tất cả sản phẩm
                 <svg
@@ -240,8 +240,8 @@ export default function HomePage() {
           <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, i) => (
               <Reveal key={step.step} delay={i * 110}>
-                <li className="group h-full rounded-xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition-colors hover:border-safety-400/50 hover:bg-white/[0.08]">
-                  <span className="text-5xl font-extrabold leading-none text-white/15 transition-colors group-hover:text-safety-400/40">
+                <li className="group h-full rounded-xl border border-white/10 bg-white/5 p-7 backdrop-blur-sm transition-colors hover:border-aqua-400/50 hover:bg-white/[0.08]">
+                  <span className="text-5xl font-extrabold leading-none text-white/15 transition-colors group-hover:text-aqua-400/40">
                     {step.step}
                   </span>
                   <h3 className="mt-4 text-xl font-bold text-white">{step.title}</h3>
@@ -252,7 +252,7 @@ export default function HomePage() {
                         className="flex gap-2.5 text-sm leading-relaxed text-steel-300"
                       >
                         <span
-                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-safety-500"
+                          className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-aqua-400"
                           aria-hidden="true"
                         />
                         {item}
@@ -278,9 +278,9 @@ export default function HomePage() {
               <Reveal key={s.slug} delay={(i % 3) * 90}>
                 <Link
                   href={`/giai-phap#${s.slug}`}
-                  className="group flex h-full flex-col rounded-xl border border-steel-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-safety-300 hover:shadow-lg"
+                  className="group flex h-full flex-col rounded-xl border border-steel-200 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent-300 hover:shadow-lg"
                 >
-                  <h3 className="text-lg font-bold text-steel-900 transition-colors group-hover:text-safety-600">
+                  <h3 className="text-lg font-bold text-steel-900 transition-colors group-hover:text-accent-600">
                     {s.name}
                   </h3>
                   <p className="mt-3 flex-1 text-[15px] leading-relaxed text-steel-600">
@@ -290,7 +290,7 @@ export default function HomePage() {
                     {s.points.map((p) => (
                       <li key={p} className="flex gap-2.5 text-sm text-steel-600">
                         <svg
-                          className="mt-0.5 h-4 w-4 shrink-0 text-safety-500"
+                          className="mt-0.5 h-4 w-4 shrink-0 text-accent-500"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
@@ -322,7 +322,7 @@ export default function HomePage() {
             <Reveal delay={160}>
               <Link
                 href="/du-an"
-                className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-steel-300 px-6 py-3 text-sm font-semibold text-steel-800 transition-all hover:border-safety-400 hover:text-safety-600"
+                className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-steel-300 px-6 py-3 text-sm font-semibold text-steel-800 transition-all hover:border-accent-400 hover:text-accent-600"
               >
                 Xem tất cả dự án
                 <svg
@@ -359,7 +359,7 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <span className="inline-block rounded-full bg-safety-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                    <span className="inline-block rounded-full bg-accent-500 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                       {project.productType}
                     </span>
                     <h3 className="mt-3 text-lg font-bold leading-snug text-white">
