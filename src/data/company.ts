@@ -21,8 +21,23 @@ export const company = {
   foundedYear: 2024,
 } as const;
 
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://thienkhoi.vn";
+const FALLBACK_SITE_URL = "https://thienkhoi.vn";
+
+// Hosting platforms often expose the variable as an empty string rather than
+// omitting it, so `??` alone would hand metadataBase an invalid "" and fail the build.
+function resolveSiteUrl() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!raw) return FALLBACK_SITE_URL;
+
+  const withProtocol = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+  try {
+    return new URL(withProtocol).origin;
+  } catch {
+    return FALLBACK_SITE_URL;
+  }
+}
+
+export const siteUrl = resolveSiteUrl();
 
 export const vision = [
   {
